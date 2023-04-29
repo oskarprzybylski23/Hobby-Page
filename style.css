@@ -1,0 +1,55 @@
+body {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.intro {
+  height: 200px;
+}
+
+.date {
+  height: 500px;
+}
+
+.column {
+  float: left;
+  position: relative;
+  width: 33.33%;
+  padding: none;
+  height: 400px;
+}
+
+.images:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+h3 span {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 80%;
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+
+
+
+
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
