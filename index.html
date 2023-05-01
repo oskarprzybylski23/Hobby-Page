@@ -3,42 +3,57 @@
   <head>
     <title> Oskar Przybylski Hobby Page </title>
     <link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <meta charset="utf-8">
   </head>
 
   <body>
+
     <header>
       <h1> Oskar Przybylski Travel Page </h1>
+      <p id="currentDate" class ="date_text"></p>
     </header>
 
+    <script>
+      function displayCurrentDate() {
+        var currentDate = new Date();
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var formattedDate = currentDate.toLocaleDateString('en-US', options);
+        var dateElement = document.getElementById("currentDate");
+        var paragraphText = `Today is ${formattedDate}, but it is also a perfect day to travel!`;
+        dateElement.textContent = paragraphText;
+      }
+
+      window.onload = function() {
+        displayCurrentDate();
+      };
+    </script>
+
     <div class="intro">
-      <about>
+      <div class= "about">
         <h2> Learn about my travel</h2>
         <p> Since I can remember I was the type of a person who enjoyed taking the unknown route, even if that sometimes simply meant going to the school the longer route just to see what is there. That curiosity inevitably led to travelling becoming one of my lifelong passions and took me to the places and experiences that I would never expect. </p>
-
         <p> This website presents my recent travel to South East Asia. Follow my steps from India, through Sri Lanka and go island hopping in Indonesia. </p>
-    </div>
 
-    <div class ="images">
-
-      <div class="column" style="background-color:#aaa;">
-
-          <img src="India.jpg" alt="India" />
-          <h3><span> India </span></h3>
-      </div>
-      <div class="column" style="background-color:#bbb;">
-          <img src="Sri_Lanka.jpg" alt="Sri_Lanka" />
-          <h3><span> Sri Lanka </span></h3>
-      </div>
-      <div class="column" style="background-color:#ccc;">
-          <img src="Indonesia.jpg" alt="Indonesia" />
-          <h3><span> Indonesia </span></h3>
       </div>
 
-    </div>
+      <div class ="images">
 
-    <div class ="date">
-      
+        <div class="column">
+            <img class="main_image" src="India.jpg" alt="India" />
+            <h3><span><a href="india.html" >India</a></span></h3>
+        </div>
+        <div class="column">
+            <img class="main_image" src="Sri_Lanka.jpg" alt="Sri_Lanka" />
+            <h3><span><a href="srilanka.html" >Sri Lanka</a></span></h3>
+        </div>
+        <div class="column">
+            <img class="main_image" src="Indonesia.jpg" alt="Indonesia" />
+            <h3><span><a href="indonesia.html" >Indonesia</a></span></h3>
+        </div>
+
+      </div>
+
     </div>
 
     <footer>
@@ -46,22 +61,5 @@
     </footer>
 
     </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </html>
