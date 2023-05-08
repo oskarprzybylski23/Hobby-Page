@@ -1,84 +1,39 @@
-/* colour palette */
+/* Define the color palette */
 :root {
---background: #37392D;
---primary: #1D1E18;
---secondary: #CBDF90;
---accent: #56A3A6;
---accent2: #0D1821;
+  --background: #37392D;
+  --primary: #1D1E18;
+  --secondary: #CBDF90;
+  --accent: #56A3A6;
+  --accent2: #0D1821;
 }
 
-
-/* set margins for the page to 0 to fill the whole page width*/
-body, html{
-  margin:0;
-  padding:0;
+/* Set margins for the page to 0 to fill the whole page width */
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
-/* set main background*/
+/* Set main background and font family */
 body {
   font-family: 'Josefin Sans', sans-serif;
   background-color: var(--background);
 }
 
+/* Style the header */
 header {
   margin-bottom: 20px;
   background-color: var(--primary);
   padding: 10px;
   border-bottom: 5px solid var(--accent);
-
 }
 
-.date_text {
-  margin-left: 25px;
-  color: white;
-}
-
-.about {
-  background-color: var(--secondary);
-  height: auto;
-  padding: 20px;
-  border: 5px solid var(--accent);
-  border-radius: 25px;
-  margin: 10px;
-  margin-bottom: 20px;
-}
-
-.images {
-  border-radius: 25px;
-  background-color: var(--secondary);
-  border: 5px solid var(--accent);
-  width: 90%;
-  margin: auto;
-  padding: 20px;
-  margin-bottom: 50px;
-}
-
-.column {
-  float: left;
-  position: relative;
-  width: 31%;
-  padding: 10px;
-  height: auto;
-}
-
-.column img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: solid 3px var(--accent2);
-}
-
-.images:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
+/* Style paragraphs */
 p {
   font-size: 17px;
   letter-spacing: 0.1em;
 }
 
+/* Style main heading */
 h1 {
   margin-left: 25px;
   color: white;
@@ -86,12 +41,14 @@ h1 {
   text-transform: uppercase;
 }
 
+/* Style secondary heading */
 h2 {
   margin-left: none;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 
+/* Style span in third-level heading */
 h3 span {
   position: absolute;
   top: 200px;
@@ -107,6 +64,7 @@ h3 span {
   border-radius: 0 10px 10px 0;
 }
 
+/* Style the footer */
 footer {
   background-color: var(--primary);
   border-top: 5px solid var(--accent);
@@ -115,24 +73,87 @@ footer {
   color: white;
 }
 
+/* Style links */
 a {
   color: inherit;
- }
+}
 
- li {
-   color: white;
-   font-size: 20px;
- }
+/* Style list items */
+li {
+  color: white;
+  font-size: 20px;
+}
 
-.content {
+/* Style date text */
+.date_text {
+  margin-left: 25px;
+  color: white;
+}
+
+/* Style the "About" section */
+.about {
+  background-color: var(--secondary);
+  text-align: justify;
+  min-width: 800px;
+  width: 60%;
+  height: auto;
+  padding: 20px;
+  border: 5px solid var(--accent);
+  border-radius: 25px;
+  margin: auto;
+  margin-right: 20%;
+  margin-bottom: 20px;
+}
+
+/* Style image grid */
+.images {
   display: table;
   border-radius: 25px;
   background-color: var(--secondary);
   border: 5px solid var(--accent);
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+/* Style image grid columns */
+.column {
+  float: left;
+  position: relative;
+  width: 31%;
+  padding: 10px;
+  height: auto;
+}
+
+/* Style images in the image grid */
+.column img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: solid 3px var(--accent2);
+}
+
+/* Add clearfix to image grid */
+.images:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the content section */
+.content {
+  display: table;
+  min-width: 1200px;
+  border-radius: 25px;
+  background-color: var(--secondary);
+  border: 5px solid var(--accent);
+  float: right;
   width: auto;
   height: auto;
-  margin: 10px;
-  padding: 20px;
+  margin-left: 10px;
+  margin-right: 20%;
+  margin-bottom: 20px;
 }
 
 .column-for-destination {
@@ -143,20 +164,22 @@ a {
 
 .left {
   float: left;
-  width: 15%;
-
+  width: auto;
   text-transform: uppercase;
+  padding-right: 30px;
   line-height: 50px;
   border-radius: 10px;
   background-color: var(--accent);
+  margin: 20px 0px 20px 20px;
 
 }
 
 .right {
-  width: 80%;
-  /* height: auto; */
-  float: right;
-  padding-left: 20px
+  min-width: 800px;
+  width: auto;
+  height: auto;
+  margin: 20px 20px 20px 22%;
+  text-align: justify;
 }
 
 .content:after {
