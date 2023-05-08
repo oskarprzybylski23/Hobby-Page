@@ -25,6 +25,7 @@ header {
   background-color: var(--primary);
   padding: 10px;
   border-bottom: 5px solid var(--accent);
+  height: 100px;
 }
 
 /* Style paragraphs */
